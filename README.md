@@ -49,7 +49,7 @@ Forking this project and <b>changing author name won't make you developer</b>
 
 ---
 
-<h4><a href="https://upayi.me/">Click here to create your UPI link</a></h4>
+<h4><a href="https://upayi.tk/">Click here to create your UPI link</a></h4>
 <h3>Made with :heart: by <a href="https://nivash.me" alt="Nivash">Nivash</a>
 </div>
 
