@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Coded by Nivash @xi11a on 5th August 2020 -->
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-W9MTXPC');
+    </script>
+    <!-- End Google Tag Manager -->
+
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Meta Tags -->
+    <meta name="author" content="Nivash">
+    <meta name="description" content="Create Payment Link of your UPI ID!">
+    <meta name="keywords" content="nivash,xilla,xi11a,upi,payment,gateway,upayi,transaction">
+    <meta name="google-site-verification" content="gEahbY28KIl0vU5Cj8tQ2GngFLlx-oMtAYe8GhsSBus" />
+    <link rel="icon" href="https://telegra.ph/file/2f094c81af60c83f28f84.png" type="image/png" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <title>UPI Link Creator for Easy Payment</title>
+</head>
+
+<body>
+    <div class="card">
+        <div class="banner">
+            <img height=360px; src="{{ qr }}">
+        </div>
+        {% if amount %}
+        <h2 class="name animate__animated animate__tada">Paying {{ amount }}₹ to {{ id }}</h2>
+        {% else %}
+        <h2 class="name animate__animated animate__tada">Paying to {{ id }}</h2>
+        {% endif %}
+        <div class="title">Secure and instant payments powered by
+            <br><br>
+            <img height="36px" src="https://telegra.ph/file/03c4581ebd2a0e21972de.png">
+            <img height="36px" src="https://telegra.ph/file/e290ab4d1dbf1ae1dab10.png">
+
+        </div>
+
+        <div class="actions">
+            <div class="pay-btn">
+                {% if amount %}
+                <a href="upi://pay?pn=UPAYI&pa={{ id }}&cu=INR&am={{ amount }}"> <button>Pay Now</button></a>
+                {% else %}
+                <a href="upi://pay?pn=UPAYI&pa={{ id }}&cu=INR"> <button>Pay Now</button></a>
+                {% endif %}
+                <br><br>
+                <a href="/"> <button>Create your UPI Link</button></a>
+                <br>
+            </div>
+        </div>
+
+        <div class="desc link"> <a href="https://nivash.me">Made with <span class="love">❤️</span> by Nivash</a></div>
+
+    </div>
+
+</body>
+
+</html>
