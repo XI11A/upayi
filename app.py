@@ -42,7 +42,7 @@ def create_qr(id):
         version=1,
         level='H',
         picture="logo.jpg",
-        colorized=False,
+        colorized=True,
         contrast=1.0,
         brightness=1.0,
         save_name=id+"_qr.png",
