@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
 body {
     font-size: 15px;
-    color: #404040;
+    color: #ffffff;
     font-family: Montserrat, sans-serif;
-    background-image: linear-gradient(to bottom right, #ff9eaa 0% 65%, #e860ff 95% 100%);
+    background-image: linear-gradient(-45deg, #32e4d5, #18f24e, #b3ff01);
     background-position: center;
     background-attachment: fixed;
     margin: 0;
@@ -14,13 +14,13 @@ body {
 }
 
 .card {
-    background-color: #fff;
+    background-color: rgb(0, 0, 0);
     max-width: 360px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     border-radius: 1.5rem;
-    box-shadow: 0px 1rem 1.5rem rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 1rem 1.5rem #016b1c;
 }
 
 .card .banner {
@@ -103,7 +103,7 @@ body {
 }
 
 .card .title {
-    color: #a0a0a0;
+    color: #ffffff;
     font-size: 0.9rem;
     text-align: center;
     padding: 1rem 1rem 1rem 1rem;
@@ -117,26 +117,33 @@ body {
 }
 
 .card .actions .pay-btn button {
-    color: inherit;
-    font: inherit;
-    font-weight: bold;
-    background-color: #ffd01a;
+    
+    position: relative;
+    text-align: center;
     width: 100%;
-    border: none;
     padding: 1rem 1rem 1rem 1rem;
-    outline: none;
-    box-sizing: border-box;
-    border-radius: 1.5rem/50%;
-    transition: background-color 100ms ease-in-out, transform 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    color: #18f24e;
+    background-color: #000;
+    font-weight: bold;
+    border: 5px solid #18f24e;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: 1s;
 }
 
 .card .actions .pay-btn button:hover {
-    background-color: #efb10a;
-    transform: scale(1.1);
+    
+    box-shadow: 0 5px 50px 0 #18f24e inset, 0 5px 50px 0 #18f24e,
+                0 5px 50px 0 #18f24e inset, 0 5px 50px 0 #18f24e;
+    text-shadow: 0 0 5px #18f24e, 0 0 5px #18f24e;
 }
 
 .card .actions .pay-btn button:active {
-    background-color: #e8a200;
+    
+    background-color: #016b1c;
+    color: rgb(255, 255, 255);
     transform: scale(1);
 }
 
@@ -148,7 +155,7 @@ body {
 
 a:link {
     text-decoration: none;
-    color: #404040;
+    color: #b8b7b7;
 }
 
 a:active {
@@ -156,7 +163,7 @@ a:active {
 }
 
 a:visited {
-    color: #404040;
+    color: #b8b7b7;
 }
 
 .link:hover {
